@@ -28,6 +28,14 @@ http://localhost:3000/quotes/
 
 The API is expecting the payload of the POST to be in JSON format with both a "quote" and an "author".
 
+### Update a quote
+
+To update an existing quote make a PUT request to the following endpoint:
+
+http://localhost:3000/quotes/:id
+
+The API is expecting the payload to be in JSON format with both a "quote" and an "author".
+
 #### Notes
 
 REST API is different from a traditional serverside application because it responds to requests with data such as JSON; a traditional serverside application responds to requests with HTML. REST is less flexible than GraphQL which can more flexible and eliminate over and underfetching.  
