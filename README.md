@@ -1,10 +1,23 @@
-## data.json is a mock data base for this exercise. 
+## Overview
 
-## records.js is a very basic ORM 
+This is an open REST API to generate quotes. It was developed for practice. To continue practice this APi will be migrated from REST to GraphQL 
 
-### Notes
+### How to use
 
-REST API is different from a traditional serverside application because it responds to requests with data such as JSON; a traditional serverside application responds to requests with HTML. 
+Download the files and run; npm install.
+
+Then to start a local server run; npm start. 
+
+### Root endpint
+
+You can issue a GET request to the root endpoint to get all the quotes in data.json
+
+http://localhost:3000/quotes/
+
+
+#### Notes
+
+REST API is different from a traditional serverside application because it responds to requests with data such as JSON; a traditional serverside application responds to requests with HTML. REST is less flexible than GraphQL which can more flexible and eliminate over and underfetching.  
 
 Client: application requesting info
 
