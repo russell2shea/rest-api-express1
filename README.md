@@ -1,6 +1,6 @@
 ## Overview
 
-This is an open REST API to generate quotes. It was developed for practice. To continue practice this APi will be migrated from REST to GraphQL 
+This is an open REST API to generate quotes. It was developed for practice. To continue practice this API will be migrated from REST to GraphQL 
 
 ### How to use
 
@@ -14,6 +14,19 @@ You can issue a GET request to the root endpoint to get all the quotes in data.j
 
 http://localhost:3000/quotes/
 
+### GET a signle quote
+
+You can issue a GET request to return a single quote if the quotes id is passed to the following endpoint:
+
+http://localhost:3000/quotes/:id
+
+### Add a quote
+
+To add a quote to data.json you need to make a POST request to the following endpoint: 
+
+http://localhost:3000/quotes/
+
+The API is expecting the payload of the POST to be in JSON format with both a "quote" and an "author".
 
 #### Notes
 

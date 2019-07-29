@@ -28,9 +28,9 @@ app.use(express.json());
 
 
 /* Send a POST request to /quotes to CREATE a new quote */
-	app.post('/quotes', (req,res) =>{
+	app.post('/quotes', async (req,res) =>{
 		// take info sent from client, store it in data.json, then send respone of what we stored. 
-		const quote = records.createQuote({
+		const quote = await records.createQuote({
 			quote: req.body.quote,
 			author: req.body.author
 		});
