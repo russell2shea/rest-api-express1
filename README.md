@@ -1,4 +1,6 @@
-# rest-api-express-1
+## data.json is a mock data base for this exercise. 
+
+## records.js is a very basic ORM 
 
 ### Notes
 
@@ -13,6 +15,5 @@ Example github api.
 REST API's us HTTP methods; GET POST PUT DELETE. As opposed to the more traditional CRUD. 
 
 API nouns are usually used to define resouces. For example; movies. 
-
 
 

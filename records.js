@@ -21,6 +21,7 @@ function save(data){
  * @param None
  */
 function getQuotes(){
+  // promise that uses nodes readFile method to retrieve quotes from the data.json file. Then resolve the promise with that data.
   return new Promise((resolve, reject) => {
     fs.readFile('data.json', 'utf8', (err, data) => {
       if (err) {
