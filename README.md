@@ -12,19 +12,19 @@ Then to start a local server run; npm start.
 
 You can issue a GET request to the root endpoint to get all the quotes in data.json
 
-http://localhost:3000/quotes/
+http://localhost:3000/api/quotes/
 
 ### GET a signle quote
 
 You can issue a GET request to return a single quote if the quotes id is passed to the following endpoint:
 
-http://localhost:3000/quotes/:id
+http://localhost:3000/api/quotes/:id
 
 ### Add a quote
 
 To add a quote to data.json you need to make a POST request to the following endpoint: 
 
-http://localhost:3000/quotes/
+http://localhost:3000/api/quotes/
 
 The API is expecting the payload of the POST to be in JSON format with both a "quote" and an "author".
 
@@ -32,7 +32,7 @@ The API is expecting the payload of the POST to be in JSON format with both a "q
 
 To update an existing quote make a PUT request to the following endpoint:
 
-http://localhost:3000/quotes/:id
+http://localhost:3000/api/quotes/:id
 
 The API is expecting the payload to be in JSON format with both a "quote" and an "author".
 
@@ -40,7 +40,7 @@ The API is expecting the payload to be in JSON format with both a "quote" and an
 
 To delate an existing quote make a DELETE request to the following endpoing: 
 
-http://localhost:3000/quotes/:id
+http://localhost:3000/api/quotes/:id
 
 If the post is succesful you will get a 204 status code
 
