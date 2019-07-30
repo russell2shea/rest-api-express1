@@ -6,11 +6,6 @@
       "author": "Martin Luther King Jr"
     },
     {
-      "id": 5779,
-      "quote": "Use what you’ve been through as fuel, believe in yourself and be unstoppable!",
-      "author": "Yvonne Pierre"
-    },
-    {
       "id": 3406,
       "quote": "To succeed, you have to do something and be very bad at it for a while. You have to look bad before you can look really good.",
       "author": "Barbara DeAngelis"
@@ -44,6 +39,11 @@
       "quote": "Before software can be reusable it first has to be usable.",
       "author": "Ralph Johnson",
       "id": 2753
+    },
+    {
+      "quote": "Perfection is achieved not when there is nothing more to add, but rather when there is nothing more to take away.",
+      "author": "Antoine de Saint-Exupery",
+      "id": 9985
     }
   ]
 }
