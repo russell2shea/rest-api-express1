@@ -84,6 +84,13 @@ function asyncHandler(cb){
 			await records.deleteQuote(quote);
 			res.status(204).end();
 	}));
+
+
 // Send a GET request to /quotes/quote/random to READ (view) a random quote
+router.get('/qoutes/quote/random', asyncHandler(async(req,res,next)=>{
+	const quote = await records.getRandomQuote();
+	res.json(quote);
+}));
+
 
 module.exports = router;

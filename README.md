@@ -20,6 +20,12 @@ You can issue a GET request to return a single quote if the quotes id is passed 
 
 http://localhost:3000/api/quotes/:id
 
+### GET a single random quote
+
+You can issue a GET request to return a single random quote
+
+http://localhost:3000/api/qoutes/quote/random
+
 ### Add a quote
 
 To add a quote to data.json you need to make a POST request to the following endpoint: 
