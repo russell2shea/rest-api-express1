@@ -5,7 +5,6 @@ const records = require('./records');
 /* Express middleware to tell express we expect requests as json, so we can have it available to use on the requesst object. All data will be sent here first */ 
 app.use(express.json());
 
-
 /* Express Get route handlers 
 	greetings is the route we want to handle
 	the call backfunction we want to respond with a function that has two arguments. One the incoming request (req) form the client the other the (res) response form the server. 
@@ -104,6 +103,24 @@ app.use(express.json());
 		}
 	});
 // Send a GET request to /quotes/quote/random to READ (view) a random quote
+
+/* Middleware to run if a request comes in that doesn't match any known route. */ 
+app.use((req, res, next) =>{
+	// create an error object
+	const err = new Error("Not Found");
+	err.status = 404;
+	next(err);
+});
+
+/* custom error handler, needs four params */
+app.use((err,req,res,next) =>{
+	res.status(err.status || 500);
+	res.json({
+		error: {
+			message: err.message
+		}
+	})
+});
 
 app.listen(3000, () => console.log('Quote API listening on port 3000!'));
 
