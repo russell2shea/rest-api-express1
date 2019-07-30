@@ -55,7 +55,7 @@ app.use(express.json());
 					author: req.body.author
 				});
 				
-				res.status(201).res.json(quote);
+				res.status(201).json(quote);
 			} else {
 				res.status(400).json({message: "Quote and author required"});
 			}
@@ -90,8 +90,19 @@ app.use(express.json());
 
 		}
 	});
-// Send a DELETE request to /quotes/:id to DELETE a quote
 
+
+// Send a DELETE request to /quotes/:id to DELETE a quote
+	app.delete("/quotes/:id", async(req,res) =>{
+		try{
+			const quote = await records.getQuote(req.params.id);
+			await records.deleteQuote(quote);
+			res.status(204).end();
+		}catch(err){
+			res.status(500).json({message: err.message});
+
+		}
+	});
 // Send a GET request to /quotes/quote/random to READ (view) a random quote
 
 app.listen(3000, () => console.log('Quote API listening on port 3000!'));

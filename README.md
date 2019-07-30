@@ -36,6 +36,15 @@ http://localhost:3000/quotes/:id
 
 The API is expecting the payload to be in JSON format with both a "quote" and an "author".
 
+### Delete a quote
+
+To delate an existing quote make a DELETE request to the following endpoing: 
+
+http://localhost:3000/quotes/:id
+
+If the post is succesful you will get a 204 status code
+
+
 #### Notes
 
 REST API is different from a traditional serverside application because it responds to requests with data such as JSON; a traditional serverside application responds to requests with HTML. REST is less flexible than GraphQL which can more flexible and eliminate over and underfetching.  
